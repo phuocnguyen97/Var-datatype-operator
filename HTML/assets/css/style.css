@@ -1,10 +1,11 @@
 body {
     padding: 0;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .container {
-    background-color: #ccc;
+    
     margin: auto; 
     width: 1150px; 
 
@@ -14,34 +15,35 @@ body {
     width: 100%;
     height: 50px;
     background-color: #000;
+    position: relative;
 }
 
-.navbar {
+.header .navbar {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    position: absolute;
 }
 
 .content {
     width: 100%;
-    height: 1000px;
+    /* height: 1000px; */
     background-color: #fff;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-footer {
-    width: 100%;
-    height: 100px;
-    background-color: steelblue;
-}
 
-ul {
+.header .navbar ul {
+
     display: flex;
     gap: 30px;
     position: absolute;
+    left: -40px;
 }
 
-li {
+.header .navbar li {
     display: flex;
     align-items: center;
     font-size: 18px;
@@ -49,12 +51,12 @@ li {
     color: #fff;
 }
 
-li img {
+.header .navbar li img {
     width: 140px;
     height: 28px;
 }
 
-li:hover {
+.header .navbar li:hover {
     color: red;
 }
 
@@ -84,4 +86,105 @@ li:hover {
 
 .hot-news-item .card .title span:hover {
     color: #666;
+}
+
+.new-news {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+
+}
+
+.new-news-left {
+    width: calc(2 * 100% / 3);
+
+}
+
+.new-news-center {
+    margin-bottom: 15px;
+}
+
+.new-news-center .card .title span {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.new-news-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+}
+
+.new-news-bottom .card .title span {
+    font-weight: bold;
+    font-size: 17px;
+
+}
+
+.new-news-bottom .card {
+    width: 50%;
+
+}
+
+.new-news-right {
+    width: calc(100% / 3);
+
+}
+
+.new-news-right-top {
+    margin-bottom: 18px;
+}
+
+.new-news-right-top .card .title span {
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+.new-news-right-bottom .card {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-top: 18px;
+    border-top: 1px dashed #d1d1d1;
+    margin-bottom: 18px;
+}
+
+.new-news-right-bottom .card .title span {
+    font-size: 17px;
+    font-weight: bold;
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    padding-top: 35px;
+}
+
+footer .card .logo {
+    border-bottom: solid 1px #333;
+
+}
+
+footer .card .navbar {
+    color: #fff;
+    position: relative;
+}
+
+footer .card .navbar ul {
+    left: -40px;
+    list-style: none;
+    position: absolute;
+}
+
+footer .card .navbar ul li {
+    float: left;
+    margin-right: 40px;
+}
+
+footer .card .navbar ul li:hover {
+    color: red;
 }
